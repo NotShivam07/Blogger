@@ -1,12 +1,9 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './sidebar.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Context } from '../../context/Context';
 
 export default function Sidebar() {
-    const PF = "http://localhost:5000/images/";
-    const {user}=useContext(Context);
     const [cats,setCats]=useState([]);
     useEffect(()=>{
         const getCats=async ()=>{
